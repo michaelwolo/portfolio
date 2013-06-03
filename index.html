@@ -21,41 +21,40 @@
 		<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
 		<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
 		<script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox();
-		    $("#single_1").fancybox({
-          helpers: {
-              title : {
-                  type : 'float'
-              }
-          }
-      });
+			$(document).ready(function() {
+				$(".fancybox").fancybox();
+				  $("#single_1").fancybox({
+		        helpers: {
+		          title : {
+		            type : 'float'
+		          }
+		        }
+		      });
 
-    $("#single_2").fancybox({
-    	openEffect	: 'elastic',
-    	closeEffect	: 'elastic',
+		    $("#single_2").fancybox({
+		    	openEffect	: 'elastic',
+		    	closeEffect	: 'elastic',
+		    	helpers : {
+		    		title : {
+		    			type : 'inside'
+		    		}
+		    	}
+		    });
 
-    	helpers : {
-    		title : {
-    			type : 'inside'
-    		}
-    	}
-    });
+		    $(".various").fancybox({
+					maxWidth	: 800,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '70%',
+					height		: '70%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
 
-    $(".various").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
-	});
-
-	});
-</script>
+			});
+	</script>
 </head>
 <body>
   <div id="header-line"></div>
@@ -77,7 +76,7 @@
 					<h3>About</h3>	
 				</header>
 				<p class="small-text">
-					I have a desire to create simple, elegant and useful web applications with the potential to delight users. I'm interested in design but I'm beginning to appreciate the technical side of building web applications as well. I have an entrepreneurial mindset, but I'm currently sharpening my skills as I dive into the practice of building things, polishing my work as I go.
+					I have a desire to create simple, elegant and useful web applications with the potential to delight users. I'm interested in design but I'm beginning to appreciate the technical side of building web applications as well. I have an entrepreneurial mindset with an action-oriented approach to following through on my ideas. In the meantime, I'm sharpening my skills as I dive into the practice of building things, polishing my work as I go.
 				</p>
 			</article>
 			<article class="grid_11 projects">		
@@ -94,13 +93,13 @@
 					<li>
 						<a id="single_2" class="image" href="img/passes-full.png" title="Conference passes and name tags for volunteers. Logo is my own.">
 							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/passes-thumb.png" width="215" height="120">			
+							<img class="imgborder" alt="" src="img/passes-thumb.jpg" width="215" height="120">			
 						</a>
 					</li>
 					<li>
 						<a id="single_2" class="image" href="img/lead-poster.png" title="An event poster for a themed leadership conference.">
 							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/lead-thumb.png" width="215" height="120">			
+							<img class="imgborder" alt="" src="img/lead-thumb.jpg" width="215" height="120">			
 						</a>
 					</li>
 					<li>
