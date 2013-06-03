@@ -285,7 +285,8 @@ td { vertical-align: top; }
 }
 
 #twitter a{
-			background: url('../img/twitter-icon.png') no-repeat transparent;
+			background: url('../img/social-icons.png') no-repeat transparent;
+			background-position: -36px 0;
 			height: 36px;
 			width:36px;
 			display: block;
@@ -294,7 +295,7 @@ td { vertical-align: top; }
 }
 
 #github a{
-			background: url('../img/github-icon.png') no-repeat transparent;
+			background: url('../img/social-icons.png') no-repeat transparent;
 			height: 36px;
 			width:36px;
 			display: block;
@@ -303,12 +304,12 @@ td { vertical-align: top; }
 }
 
 #twitter a:hover{
-	background-image: url('../img/twitter-icon-hover.png');
+	background-position: -108px 0;
 	opacity:0.8;
 }
 
 #github a:hover{
-	background-image: url('../img/github-icon-hover.png');
+	background-position: -72px 0;
 	opacity:0.8;
 }
 
