@@ -40,6 +40,10 @@ body {
 	line-height: 1.231;
 }
 
+.small-text {
+   font-size: 12px;
+}
+
 body, button, input, select, textarea { font: 11px/20px "Helvetica Neue",Helvetica,Arial,sans-serif; color: #222; letter-spacing:1px;
 }
 
@@ -57,9 +61,9 @@ body, button, input, select, textarea { font: 11px/20px "Helvetica Neue",Helveti
    Links
    ========================================================================== */
 
-a { color: #EE6D72; text-decoration:none; }
-a:visited { color: #EE6D72; }
-a:hover { color: #EE6D72; border-bottom:dotted 1px #EE6D72; }
+a { color: #429DE6; text-decoration:none; }
+a:visited { color: #429DE6; }
+a:hover { color: #429DE6; border-bottom:dotted 1px #429DE6; }
 a:focus { outline: none; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -298,7 +302,13 @@ td { vertical-align: top; }
 			border:none;
 }
 
-#twitter a:hover, #github a:hover{
+#twitter a:hover{
+	background-image: url('../img/twitter-icon-hover.png');
+	opacity:0.8;
+}
+
+#github a:hover{
+	background-image: url('../img/github-icon-hover.png');
 	opacity:0.8;
 }
 
