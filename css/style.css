@@ -284,6 +284,16 @@ td { vertical-align: top; }
 	padding: 0;
 }
 
+#mail a{
+      background: url('../img/social-icons.png') no-repeat transparent;
+      background-position: -144px 0;
+      height: 36px;
+      width:36px;
+      display: block;
+      outline: none;
+      border:none;
+}
+
 #twitter a{
 			background: url('../img/social-icons.png') no-repeat transparent;
 			background-position: -36px 0;
@@ -301,6 +311,11 @@ td { vertical-align: top; }
 			display: block;
 			outline: none;
 			border:none;
+}
+
+#mail a:hover{
+  background-position: -180px 0;
+  opacity:0.8;
 }
 
 #twitter a:hover{
