@@ -225,38 +225,45 @@ td { vertical-align: top; }
 /* Intro Blurb */
    
 #header-line{
-	margin:0 0 120px 0;
+	margin:0 0 80px 0;
 	background-image: url('../img/header-line.png');
 	height: 15px;
 }   
 
 #horizontal-line-full{
-		background-image: url('../img/horizontal-line.png');
-		width: 780px;
-		height:2px;
-		margin: 60px 0;
-		
+	background-image: url('../img/horizontal-line.png');
+	width: 780px;
+	height:2px;
+	margin: 40px 0;	
+}
+
+.avatar {
+  margin: 0 0 0 20px;
+}
+
+.intro {
+  margin: 20px 0 0 20px;
 }
 
 /* About */
 
 .about, .contact, #social, .footer{
-	margin:0;
+	margin: 0 0 30px 0;
 }
 
  /* Projects */
  
  .projects{
- 	margin: 60px 0;
+ 	margin: 0;
  }
  
- ul#feed {
+ ul.feed {
 	 list-style-type: none;
-	 margin: 60px 0;
+	 margin: 40px 0;
 	 padding: 0;	
  }
  
- #feed li{
+ .feed li{
  	float: left;
  	margin: 0 45px 45px 0;
 	padding:5px;
@@ -336,10 +343,24 @@ td { vertical-align: top; }
    Font 'to the' Face h1,h2,h3
    ========================================================================== */
 
-h1 {font: 45px/15px 'TitilliumText22LXBold', Arial, sans-serif;letter-spacing: 2px;}
-h2 {font: 20px/15px 'TitilliumText22LThin', Arial, sans-serif;letter-spacing: 1px; 	color:#8a8989;}
-h3 {font: 28px/15px 'TitilliumText22LThin', Arial, sans-serif;letter-spacing: 1px;}
-p{color:#8a8989;}
+h1 {
+  font: 45px/15px 'TitilliumText22LXBold', Arial, sans-serif;
+  letter-spacing: 2px;
+}
+h2 {
+  font: 20px/15px 'TitilliumText22LThin', Arial, sans-serif;
+  letter-spacing: 1px;
+  color:#8a8989;
+}
+
+h3 {
+  font: 28px/15px 'TitilliumText22LThin', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+p {
+  color:#8a8989;
+}
 
 
 @font-face {
