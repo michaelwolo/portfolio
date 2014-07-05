@@ -1,198 +1,113 @@
-<!doctype html>
-
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Michael Woloszuk</title>
-	  <meta name="description" content="Michael Woloszuk">
-	  <meta name="author" content="Michael Woloszuk @michaelwolo">
-	  <meta name="viewport" content="width=device-width,initial-scale=1">
-	  <link rel="stylesheet" href="css/960_12_col.css">
-	  <link rel="stylesheet" href="css/style.css">
-	  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	  <script type="text/javascript" src="js/main.js"></script>
-	  <!-- Add fancyBox -->
-		<link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
-		<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
-		<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$(".fancybox").fancybox();
-				  $("#single_1").fancybox({
-		        helpers: {
-		          title : {
-		            type : 'float'
-		          }
-		        }
-		      });
-
-		    $("#single_2").fancybox({
-		    	openEffect	: 'elastic',
-		    	closeEffect	: 'elastic',
-		    	helpers : {
-		    		title : {
-		    			type : 'inside'
-		    		}
-		    	}
-		    });
-
-		    $(".various").fancybox({
-					maxWidth	: 800,
-					maxHeight	: 600,
-					fitToView	: false,
-					width		: '70%',
-					height		: '70%',
-					autoSize	: false,
-					closeClick	: false,
-					openEffect	: 'none',
-					closeEffect	: 'none'
-				});
-
-			});
-	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Michael Woloszuk</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/cover.css">
+	<link rel="stylesheet" href="css/project.css">
+	<link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-  <div id="header-line"></div>
-  <div class="container_12">
-  	<header>
-		<div class="grid_3 push_2 avatar">
-			<img src="img/cartoon-avatar.png" alt="Michael Woloszuk" border="0" width="116" height="135" />
+	<header id="title">Michael Woloszuk</header>
+	<div class="cover">
+		<div class="centre">
+			<div class="tagline">
+				<h1>I design and build</h1>
+				<h1><span>web products</span>.</h1>
+			</div>
+			<nav class="links">
+				<a data-scroll href="#movieshuffler" class="button">Movie Shuffler</a>
+				<a data-scroll href="#alternativ" class="button">&Aring;lternat&iuml;v</a>
+				<a data-scroll href="#onemonth" class="button">One Month Rails</a>
+			</nav>
 		</div>
-		<hgroup class="grid_7 push_1 intro">
-			<h1>Michael Woloszuk</h1>
-			<h2>Student of Web Design and Development</h2>
-		<hgroup>
-    </header>
-    <div class="clear"></div>
-    <div id="horizontal-line-full"  class="push_1"></div>
-		<div id="main" role="main" class="grid_10 push_1">	
-			<article id="about" class="grid_10 about">
-				<header>
-					<h3>About</h3>	
-				</header>
-				<p class="small-text">
-					I have a desire to create elegant web applications that delight users. I'm interested in design but I'm beginning to appreciate the technical side of building web products as well. I have an entrepreneurial mindset with an action-oriented approach to following through on my ideas. In the meantime, I'm sharpening my skills as I dive into the practice of building things, polishing my work as I go.
-				</p>
-			</article>
-			<article class="grid_11 projects">		
-				<header>
-					<h3>Work Samples</h3>		
-				</header>	
-				<ul class="feed">
-					<li>
-						<a id="single_2" class="fancybox.iframe" href="http://www.youtube.com/embed/nWPrMmv1Tis?autoplay=1" title="An animated educational video. Video production (illustration, animation, narration) is my own work.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/plainprep-video.jpg" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/movie-shuffler.png" title="Web design for a Ruby on Rails web application (see www.movieshuffler.com). Still a work in progress.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/movie-shuffler-thumb.png" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/lead-poster.png" title="An event poster for a themed leadership conference.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/lead-thumb.jpg" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/barbecue-poster.jpg" title="An event poster for a residence barbecue.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/barbecue-thumb.jpg" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/passes-full.png" title="Conference passes and name tags for volunteers. Logo is my own.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/passes-thumb.jpg" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/original.png" title="Typographic quote design. Large typeface is my own.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/original-thumb.png" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/movie-logo.png" title="Logo design for a personal web application.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/movie-logo.png" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/plainprep-logo.jpg" title="A logo for an online education venture.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/plainprep-thumb.png" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/tinker-logo.jpg" title="A logo for a research-based venture.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/tinker-thumb.png" width="215" height="120">
-						</a>
-					</li>
-				</ul>
-			</article>
-			<article class="grid_11 projects">					
-				<header>
-					<h3>Dribbble Rebounds</h3>		
-				</header>	
-				<ul class="feed">
-					<li>
-						<a id="single_2" class="image" href="img/initial-shadow.png" title="Rebound of Strahinja Todorovic's Utisak icon.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/initial-shadow.png" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/infinity.png" title="Rebound of Michael Spitz's Swipe-rsand.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/infinity.png" width="215" height="120">
-						</a>
-					</li>
-					<li>
-						<a id="single_2" class="image" href="img/dollar-sign.png" title="Rebound of Michael Spitz's Ampersand.">
-							<span class="roll"></span>
-							<img class="imgborder" alt="" src="img/dollar-sign.png" width="215" height="120">
-						</a>
-					</li>
-				</ul>					
-			</article>
-	    <footer class="grid_10 footer">
-	    	<section id="social" class="grid_6 push_4">
-	    		<ul>
-	    			<li id="mail">
-	    				<a href="mailto:mwoloszuk@gmail.com" rel="nofollow"></a>
-	    			</li>
-	    			<li id="twitter">	
-	    				<a href="http://twitter.com/#!michaelwolo" rel="nofollow" title="Michael Woloszuk (@michaelwolo) on Twitter">
-								<span>Michael Woloszuk (@michaelwolo) on Twitter</span>
-							</a>
-	    			</li>
-	    			<li id="github">	
-	    				<a href="http://github.com/michaelwolo" rel="nofollow" title="Michael Woloszuk (michaelwolo) on GitHub">
-								<span>Michael Woloszuk (michaelwolo) on GitHub</span>
-							</a>
-	    			</li>
-	    		</ul>
-	    	</section> 
-	    </footer>
-	  </div>
-  </div>
+	</div>
+	<article>
+		<a id="movieshuffler"><h1>Movie Shuffler</h1></a>
+		<ul class="links">
+			<a href="http://movieshuffler.com" class="button grey">Live Site</a>
+			<a href="https://github.com/michaelwolo/movie-shuffler" class="button grey">View Code</a>
+		</ul>
+		<div class="content">
+			<img id="movie-header" src="img/movieshuffler.png" alt="Movie Shuffler">
+			<p>Movie Shuffler is a web application that returns movie recommendations based on selected content keywords. PHP and MySQL powers the server side of the site. The site's views are dynamically generated with JavaScript and animated with CSS. To simplify user submissions, APIs from both YouTube and Rotten Tomatoes were used. The site is fully responsive and works well on mobile devices.</p>
+		</div>
+	</article>
+	<article>
+		<a id="alternativ"><h1>&Aring;lternat&iuml;v</h1></a>
+		<ul class="links">
+			<a href="http://alternativ.herokuapp.com/" class="button grey">Live Site</a>
+			<a href="https://github.com/fromtheothershore/ikealternative" class="button grey">View Code</a>
+		</ul>
+		<div class="content">
+			<img id="alternativ-header" src="img/alternativ.png" alt="Alternativ">
+			<p>Collaborated in a multidisciplinary team of 4 to design and develop a web product using lean user experience and agile software development methodologies. I was responsible for the front-end web development of our project. We created an online catalog of IKEA furniture alternatives available in Toronto. The client side of the site was built with HTML and CSS. The site is fully responsive.</p>
+		</div>
+	</article>
+	<article>
+		<a id="onemonth"><h1>One Month Rails</h1></a>
+		<ul class="links">
+			<a href="http://hidden-refuge-9692.herokuapp.com/" class="button grey">Live Site</a>
+			<a href="https://github.com/michaelwolo/omrails" class="button grey">View Code</a>
+		</ul>
+		<div class="content">
+			<img id="onemonth-header" src="img/onemonthrails.png" alt="One Month Rails">
+			<p>Completed Mattan Griffel's One Month Rails course and created a Pinterest-like web application. Familiarized myself with the basics of web application development with Ruby on Rails, deployment with Heroku, front-end web development with Bootstrap and version control with Git and GitHub.</p>
+		</div>
+	</article>
+	<footer>
+		<ul class="social">
+			<li><a href="https://twitter.com/michaelwolo" class="twitter"></a></li>
+			<li><a href="https://github.com/michaelwolo" class="github"></a></li>
+			<li><a href="http://ca.linkedin.com/in/michaelwolo" class="linkedin"></a></li>
+			<li><a href="mailto:mwoloszuk@gmail.com" class="email"></a></li>
+		</ul>
+	</footer>
+	<script src="js/fastclick.js"></script>
+	<script src="js/smooth-scroll.js"></script>
+	<script>
+		// Fastclick Polyfill Setup
+		window.addEventListener('load', function() {
+		    FastClick.attach(document.body);
+		}, false);
 
-<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-  chromium.org/developers/how-tos/chrome-frame-getting-started -->
-<!--[if lt IE 7 ]>
-  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-<![endif]-->
-  
+		// Smooth Scroll Animation Setup
+		smoothScroll.init({
+			speed: 500,
+			offset: 50
+		});
+
+		// Changing Header Titles During Scroll
+		(function() {
+			var articles = document.getElementsByTagName('article');
+			var title = document.getElementById('title');
+			document.body.addEventListener('touchmove', function() {
+				if ((window.pageYOffset || document.body.scrollTop) < articles[0].offsetTop) {
+					title.innerHTML = 'Michael Woloszuk';
+				}
+				for (var i = 0; i < articles.length; i++) {
+					if ((window.pageYOffset + 40 || document.body.scrollTop + 40) > articles[i].offsetTop) {
+						title.innerHTML = articles[i].getElementsByTagName('h1')[0].innerHTML;
+					}
+				}
+			}, false);
+			window.onscroll = function () {
+				console.log('Window Offset Y: ' + window.pageYOffset);
+				console.log('Window Scroll Top: ' + document.body.scrollTop);
+				if ((window.pageYOffset || document.body.scrollTop) < articles[0].offsetTop) {
+					title.innerHTML = 'Michael Woloszuk';
+				}
+				for (var i = 0; i < articles.length; i++) {
+					if ((window.pageYOffset + 40 || document.body.scrollTop + 40) > articles[i].offsetTop) {
+						title.innerHTML = articles[i].getElementsByTagName('h1')[0].innerHTML;
+					}
+				}
+			};
+		})();
+	</script>
 </body>
 </html>

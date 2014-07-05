@@ -1,0 +1,61 @@
+footer {
+	border-top: 1px solid #E5E5E5;
+	display: block;
+	padding: 20px 0;
+	text-align: center;
+}
+.social {
+	display: inline-block;
+  margin: 50px auto;
+  text-align: center;
+}
+.social li {
+	display: inline-block;
+  margin: 0 20px;
+  list-style: none;
+  vertical-align: bottom;
+  font-size: 20px;
+  text-align: right;
+}
+.twitter {
+  background: url(../img/icons.svg) no-repeat;
+  background-position: -62px 0;
+}
+.twitter:hover {
+  background-position: -62px -58px;
+}
+.github {
+  background: url(../img/icons.svg) no-repeat;
+}
+.github:hover {
+  background-position: 0 -58px;
+}
+.linkedin {
+  background: url(../img/icons.svg) no-repeat;
+  background-position: -122px 0;
+}
+.linkedin:hover {
+  background-position: -122px -58px;
+}
+.email {
+  background: url(../img/icons.svg) no-repeat;
+  background-position: -183px 0;
+}
+.email:hover {
+  background-position: -183px -58px;
+}
+.social a {
+  display: block;
+  width: 61px;
+  height: 60px;
+  border none;
+}
+@media all and (max-width: 460px) {
+	.social {
+    width: 250px;
+    margin: 10px auto 20px;
+  }
+  .social li {
+    margin: 10px;
+  }
+}
