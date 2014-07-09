@@ -4,12 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Michael Woloszuk</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/cover.css">
-	<link rel="stylesheet" href="css/project.css">
-	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 	<header id="title">Michael Woloszuk</header>
@@ -85,24 +82,23 @@
 		(function() {
 			var articles = document.getElementsByTagName('article');
 			var title = document.getElementById('title');
+			var offset = 80;
 			document.body.addEventListener('touchmove', function() {
 				if ((window.pageYOffset || document.body.scrollTop) < articles[0].offsetTop) {
 					title.innerHTML = 'Michael Woloszuk';
 				}
 				for (var i = 0; i < articles.length; i++) {
-					if ((window.pageYOffset + 40 || document.body.scrollTop + 40) > articles[i].offsetTop) {
+					if ((window.pageYOffset + offset || document.body.scrollTop + offset) > articles[i].offsetTop) {
 						title.innerHTML = articles[i].getElementsByTagName('h1')[0].innerHTML;
 					}
 				}
 			}, false);
 			window.onscroll = function () {
-				console.log('Window Offset Y: ' + window.pageYOffset);
-				console.log('Window Scroll Top: ' + document.body.scrollTop);
 				if ((window.pageYOffset || document.body.scrollTop) < articles[0].offsetTop) {
 					title.innerHTML = 'Michael Woloszuk';
 				}
 				for (var i = 0; i < articles.length; i++) {
-					if ((window.pageYOffset + 40 || document.body.scrollTop + 40) > articles[i].offsetTop) {
+					if ((window.pageYOffset + offset || document.body.scrollTop + offset) > articles[i].offsetTop) {
 						title.innerHTML = articles[i].getElementsByTagName('h1')[0].innerHTML;
 					}
 				}
