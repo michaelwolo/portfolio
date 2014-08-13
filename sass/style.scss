@@ -39,7 +39,7 @@ $blue-light: #4AE;
 	@media all and (max-width: $max-width) { @content; }
 }
 
-// CSS STARTS
+// STYLING STARTS
 
 *, *:before, *:after {
 	@include border-box;
