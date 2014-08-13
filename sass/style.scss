@@ -1,0 +1,225 @@
+// SASS DECLARATIONS
+
+$blue: #38D;
+$blue-light: #4AE;
+
+@mixin border-box {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+@mixin zero {
+	margin: 0;
+	padding: 0;
+}
+@mixin centre {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+@mixin cancel-centre {
+	position: static;
+	top: none;
+	left: none;
+	-webkit-transform: none;
+	ms-transform: none;
+	transform: none;
+}
+@mixin transformY($amount: 1px) {
+	-webkit-transform:translateY($amount);
+	-moz-transform:translateY($amount);
+	-ms-transform:translateY($amount);
+	-o-transform:translateY($amount);
+	transform:translateY($amount);
+}
+@mixin media($max-width) {
+	@media all and (max-width: $max-width) { @content; }
+}
+
+// CSS STARTS
+
+*, *:before, *:after {
+	@include border-box;
+}
+html {
+	@include zero;
+	height: 100%
+}
+body {
+	@extend html;
+	background: #FFF;
+	color: #222;
+	font: 400 16px 'Roboto', Helvetica, Arial, sans-serif;
+}
+ul {
+	@include zero;
+}
+header {
+	background: #FFF;
+	border-bottom: 1px solid #E5E5E5;
+	color: #444;
+	font-size: 18px;
+	padding: 10px 0 9px;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+.cover {
+	height: 100%;
+	text-align: center;
+	h1 {
+		display: inline-block;
+		font-size: 48px;
+		margin: 0 8px 0 0;
+		&:nth-child(2) {
+			margin: 0 auto 20px;
+		}
+		@include media(480px) {
+			font-size: 30px;
+		}
+	}
+	span {
+		color: $blue;
+	}
+	@media all and (max-width: 775px), all and (max-height: 440px) {
+		height: auto;
+	}
+}
+.centre {
+	@include centre;
+	margin: 0 auto;
+	width: 800px;
+	max-width: 90%;
+	@media all and (max-width: 775px), all and (max-height: 440px) {
+		@include cancel-centre;
+		padding: 165px 0 125px;
+	}
+	@include media(480px) {
+		padding: 115px 0 75px;
+	}
+}
+.links {
+	margin: 0 auto;
+	max-width: 90%;
+	text-align: center;
+	a {
+		background: $blue;
+		border-radius: 2px;
+		border: 1px solid #27C;
+		color: #FFF;
+		display: inline-block;
+		font-size: 20px;
+		font-weight: 700;
+		margin: 10px 10px 12px;
+		padding: 6px 15px 7px;
+		text-decoration: none;
+		text-shadow: 0 1px #27C;
+		&.grey {
+			background: #CCC;
+			border: 1px solid #BBB;
+			text-shadow: 0 1px #BBB;
+		}
+		&:hover {
+			background: $blue-light;
+			border: 1px solid #39D;
+			text-shadow: 0 1px #39D;
+			@media only screen and (-webkit-device-pixel-ratio: .75) and (max-device-width: 768px), only screen and (-webkit-device-pixel-ratio: 1) and (max-device-width: 768px), only screen and (-webkit-device-pixel-ratio: 1.5) and (max-device-width: 768px), only screen and (-webkit-device-pixel-ratio: 2) and (max-device-width: 768px) {
+				// Remove sticky hover state on mobile devices
+				background: $blue;
+				border: 1px solid #27B;
+				text-shadow: 0 1px #27B;
+			}
+		}
+		&:active {
+			@include transformY;
+			background: #4AB5F5;
+		}
+		@media all and (max-width: 775px), all and (max-height: 440px) {
+			padding: 7px 15px;
+		}
+		@include media(505px) {
+			font-size: 16px;
+		}
+	}
+}
+article {
+	display: block;
+	padding: 40px 0;
+	&:nth-child(odd) {
+		background: #FAFAFA;
+	}
+	&:nth-child(n+2) {
+		border-top: 1px solid #E5E5E5;
+	}
+	h2 {
+		font-size: 36px;
+		margin: 0 0 10px;
+		text-align: center;
+		text-decoration: none;
+		@include media(480px) {
+			font-size: 30px;
+		}
+	}
+}
+img {
+	border: 1px solid #E5E5E5;
+	display: block;
+	margin: 30px 0 40px;
+	width: 100%;
+}
+.content {
+	font-size: 20px;
+	margin: 0 auto;
+	width: 600px;
+	max-width: 80%;
+	p {
+		color: #333;
+		line-height: 1.6;
+		@include media(480px) {
+			font-size: 18px;
+		}
+	}
+}
+footer {
+	border-top: 1px solid #E5E5E5;
+	display: block;
+	padding: 20px 0;
+	text-align: center;
+}
+.social {
+	display: inline-block;
+  margin: 50px auto;
+  li {
+		display: inline-block;
+		font-size: 20px;
+		list-style: none;
+	  margin: 0 20px;
+	  vertical-align: bottom;
+	  @include media(460px) {
+	  	margin: 10px;
+	  }
+	}
+	a {
+		border: none;
+		display: block;
+		height: 60px;
+	  width: 61px;
+	}
+	@include media(460px) {
+		margin: 10px auto 20px;
+		width: 250px;
+	}
+}
+$icons:(twitter:-62px, github: 0, linkedin: -122px, email: -183px);
+@each $social, $x in $icons {
+	.#{$social} {
+		background: url(../img/icons.svg) $x 0 no-repeat;
+	}
+	.#{$social}:hover {
+		background-position: $x -58px;
+	}
+}

@@ -1,1 +1,9 @@
-.DS_Store
+#OS Junk Files
+*.DS_Store
+._*.*
+
+#Node Modules
+node_modules/
+
+#Unecessary Extras
+.sass-cache/

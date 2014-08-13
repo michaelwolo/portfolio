@@ -1,11 +1,18 @@
-module.exports = function(grunt) {
+var livereloadPort = 35729;
 
-  // Project configuration.
+module.exports = function(grunt) {
   grunt.initConfig({
-    concat: {
+    // concat: {
+    //   dist: {
+    //     src: ['css/base.css', 'css/cover.css', 'css/footer.css', 'css/header.css', 'css/project.css'],
+    //     dest: 'css/style.css'
+    //   }
+    // },
+    sass: {
       dist: {
-        src: ['css/base.css', 'css/cover.css', 'css/footer.css', 'css/header.css', 'css/project.css'],
-        dest: 'css/style.css'
+        files: {
+          'css/style.css':'sass/style.scss'
+        }
       }
     },
     cssmin: {
@@ -18,16 +25,42 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['css/*.css'],
-      tasks: ['concat', 'cssmin']
+      sass: {
+        files: ['sass/style.scss'],
+        tasks: ['sass']
+      },
+      cssmin: {
+        files: ['css/*.css', '!css/*.min.css'],
+        tasks: ['cssmin'],
+        options: {
+          livereload: livereloadPort
+        }
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          hostname: '*',
+          port: 3000,
+          livereload: livereloadPort
+        }
+      }
+    },
+    open: {
+      index: {
+        path: 'http://0.0.0.0:3000'
+      }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-open');
 
-  // Default task(s).
-  grunt.registerTask('default', ['concat', 'cssmin']);
+  // Default task
+  grunt.registerTask('default', ['sass', 'cssmin', 'connect', 'open', 'watch']);
 
 };

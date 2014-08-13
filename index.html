@@ -12,10 +12,8 @@
 	<header id="title">Michael Woloszuk</header>
 	<div class="cover">
 		<div class="centre">
-			<div class="tagline">
-				<h1>I design and build</h1>
-				<h1><span>web products</span>.</h1>
-			</div>
+			<h1>I design and build</h1>
+			<h1><span>web products</span>.</h1>
 			<nav class="links">
 				<a data-scroll href="#movieshuffler" class="button">Movie Shuffler</a>
 				<a data-scroll href="#alternativ" class="button">&Aring;lternat&iuml;v</a>
@@ -24,18 +22,18 @@
 		</div>
 	</div>
 	<article>
-		<a id="movieshuffler"><h1>Movie Shuffler</h1></a>
+		<a id="movieshuffler"><h2>Movie Shuffler</h2></a>
 		<ul class="links">
 			<a href="http://movieshuffler.com" class="button grey">Live Site</a>
 			<a href="https://github.com/michaelwolo/movie-shuffler" class="button grey">View Code</a>
 		</ul>
 		<div class="content">
 			<img id="movie-header" src="img/movieshuffler.png" alt="Movie Shuffler">
-			<p>Movie Shuffler is a web application that returns movie recommendations based on selected content keywords. PHP and MySQL powers the server side of the site. The site's views are dynamically generated with JavaScript and animated with CSS. To simplify user submissions, APIs from both YouTube and Rotten Tomatoes were used. The site is fully responsive and works well on mobile devices.</p>
+			<p>Movie Shuffler is a web application that returns movie recommendations based on selected content keywords. The server side of the site was built with PHP and MySQL. The site's views are dynamically generated with JavaScript and animated with CSS. To simplify user submissions, APIs from both YouTube and Rotten Tomatoes were used. The site is fully responsive and works well on mobile devices.</p>
 		</div>
 	</article>
 	<article>
-		<a id="alternativ"><h1>&Aring;lternat&iuml;v</h1></a>
+		<a id="alternativ"><h2>&Aring;lternat&iuml;v</h2></a>
 		<ul class="links">
 			<a href="http://alternativ.herokuapp.com/" class="button grey">Live Site</a>
 			<a href="https://github.com/fromtheothershore/ikealternative" class="button grey">View Code</a>
@@ -46,7 +44,7 @@
 		</div>
 	</article>
 	<article>
-		<a id="onemonth"><h1>One Month Rails</h1></a>
+		<a id="onemonth"><h2>One Month Rails</h2></a>
 		<ul class="links">
 			<a href="http://hidden-refuge-9692.herokuapp.com/" class="button grey">Live Site</a>
 			<a href="https://github.com/michaelwolo/omrails" class="button grey">View Code</a>
@@ -89,7 +87,7 @@
 				}
 				for (var i = 0; i < articles.length; i++) {
 					if ((window.pageYOffset + offset || document.body.scrollTop + offset) > articles[i].offsetTop) {
-						title.innerHTML = articles[i].getElementsByTagName('h1')[0].innerHTML;
+						title.innerHTML = articles[i].getElementsByTagName('h2')[0].innerHTML;
 					}
 				}
 			}, false);
@@ -99,11 +97,21 @@
 				}
 				for (var i = 0; i < articles.length; i++) {
 					if ((window.pageYOffset + offset || document.body.scrollTop + offset) > articles[i].offsetTop) {
-						title.innerHTML = articles[i].getElementsByTagName('h1')[0].innerHTML;
+						title.innerHTML = articles[i].getElementsByTagName('h2')[0].innerHTML;
 					}
 				}
 			};
 		})();
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-53294136-1', 'auto');
+	  ga('send', 'pageview');
+
 	</script>
 </body>
 </html>
