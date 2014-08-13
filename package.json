@@ -4,6 +4,7 @@
   "description": "Project Portfolio",
   "main": "index.js",
   "author": "Michael Woloszuk",
+  "private": true,
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-concat": "^0.4.0",
