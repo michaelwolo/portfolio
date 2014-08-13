@@ -2,12 +2,6 @@ var livereloadPort = 35729;
 
 module.exports = function(grunt) {
   grunt.initConfig({
-    // concat: {
-    //   dist: {
-    //     src: ['css/base.css', 'css/cover.css', 'css/footer.css', 'css/header.css', 'css/project.css'],
-    //     dest: 'css/style.css'
-    //   }
-    // },
     sass: {
       dist: {
         files: {
@@ -54,7 +48,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
