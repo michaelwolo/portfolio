@@ -4,6 +4,3 @@
 
 #Node Modules
 node_modules/
-
-#Unecessary Extras
-.sass-cache/
